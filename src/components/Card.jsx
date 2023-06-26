@@ -1,5 +1,5 @@
 import React from "react";
-import CardObj from "../behavior/card";
+import CardObj from "../behavior/cardObj";
 import Color from "../behavior/enum/color";
 import Suit from "../behavior/enum/suit";
 import Type from "../behavior/enum/type";

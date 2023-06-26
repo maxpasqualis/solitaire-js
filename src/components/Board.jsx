@@ -1,12 +1,12 @@
 import React from "react";
-import boardObj from "../behavior/boardObj";
+import BoardObj from "../behavior/boardObj";
 
 
 class Board extends React.Component {
     render() {
-        const board = new boardObj()
-        board.initializeDeck()
-        return <p>{board.readAllCards()}</p>;
+        const board = new BoardObj()
+        const deck = board.initializeBoard()
+        return <p>board initialized</p>;
     }
 }
 

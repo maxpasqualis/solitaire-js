@@ -4,7 +4,7 @@ import Suit from "./enum/suit";
 import Type from "./enum/type";
 import LinkedList from "./linkedListImpl";
 
-class BoardObj {
+class TableauObj {
   constructor() {
     // playing field
     this.tableau = {};
@@ -14,7 +14,7 @@ class BoardObj {
     this.stock = new LinkedList();
   }
 
-  initializeBoard() {
+  initializeTableau() {
     let deck = [];
     // populates deck with 52 cards
     Object.entries(Suit).forEach((suit) => {
@@ -64,4 +64,4 @@ class BoardObj {
   }
 }
 
-export default BoardObj;
+export default TableauObj;

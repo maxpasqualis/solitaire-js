@@ -1,13 +1,13 @@
 import './App.css'
 // import Card from './components/Card'
-import Board from './components/Board'
+import Tableau from './components/Tableau'
 
 function App() {
 
   return (
     <>
         {/* <Card /> */}
-        <Board />
+        <Tableau />
     </>
   )
 }

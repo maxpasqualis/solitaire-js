@@ -1,17 +1,19 @@
 import CardObj from "./cardObj";
+
 import Color from "./enum/color";
 import Suit from "./enum/suit";
 import Type from "./enum/type";
-import LinkedList from "./linkedListImpl";
+import Foundation from "./foundationObj";
+import Stock from "./stockObj";
 
 class TableauObj {
   constructor() {
     // playing field
     this.tableau = {};
     // cards that have been 'put away', player wins when all cards are here
-    this.foundation = [];
+    this.foundation = new Foundation();
     // cards still available to draw from
-    this.stock = new LinkedList();
+    this.stock = new Stock();
   }
 
   initializeTableau() {
@@ -36,10 +38,9 @@ class TableauObj {
       this.tableau[i + 1] = tableauList.splice(0, i + 1);
     }
     // add remaining deck to stock linked list
-    deck.forEach((card) => {
-      this.stock.insert(card);
-    });
-
+    this.stock.setDeck(deck);
+    console.log(this.tableau);
+    console.log(this.stock);
     return;
   }
 

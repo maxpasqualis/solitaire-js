@@ -16,7 +16,7 @@ class TableauObj {
     this.stock = new Stock();
   }
 
-  initializeTableau() {
+  initialize() {
     let deck = [];
     // populates deck with 52 cards
     Object.entries(Suit).forEach((suit) => {
@@ -41,7 +41,7 @@ class TableauObj {
     this.stock.setDeck(deck);
     console.log(this.tableau);
     console.log(this.stock);
-    return;
+    return this;
   }
 
   shuffleDeck(/*list*/ deck) {

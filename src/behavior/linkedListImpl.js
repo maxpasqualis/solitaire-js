@@ -35,6 +35,25 @@ class LinkedList {
     return this.head;
   }
 
+  remove(obj) {
+    let current = this.head,
+      prev;
+
+    if (current && current.data === obj) {
+      this.head = current.next;
+      return this;
+    }
+
+    while (current && current.data !== obj) {
+      prev = current;
+      current = current.next;
+    }
+    if (prev && current.data === obj) {
+      prev.next = current.next;
+    }
+    return this;
+  }
+
   clear() {
     this.head = null;
   }

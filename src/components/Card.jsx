@@ -10,8 +10,14 @@ import "./styles/Card.css"
 class Card extends React.Component {
     render() { 
         const card = new CardObj(this.props.color, this.props.suit, this.props.type)
-        return <div className="card">
-            <p>{card.toString()}</p>
+        let className = "card"
+        if (card.color.value === "red") {
+            className += " red"
+        } else {
+            className += " black"
+        }
+        return <div className={className}>
+            {card.toString()}
         </div> 
     }
 }

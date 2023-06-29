@@ -1,4 +1,11 @@
 .card {
     background-color: antiquewhite;
+}
+
+.red {
+    color: red;
+}
+
+.black {
     color: black;
 }

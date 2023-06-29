@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 
 class Lane extends React.Component {
     render() {
-        let cardList = []
+        let cardList = [], i = 0;
         this.props.laneData.forEach(card => {
-            cardList.push(<Card color={card.color} suit={card.suit} type={card.type}/>)
+            cardList.push(<Card key = {i} color={card.color} suit={card.suit} type={card.type}/>)
+            i += 1;
         })
         return <div>{cardList}</div>;
     }

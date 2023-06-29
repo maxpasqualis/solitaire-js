@@ -6,9 +6,8 @@ class Lane extends React.Component {
     render() {
         let cardList = []
         this.props.laneData.forEach(card => {
-            cardList.push(<Card />)
+            cardList.push(<Card color={card.color} suit={card.suit} type={card.type}/>)
         })
-        //console.log(this.props.laneData)
         return <div>{cardList}</div>;
     }
 }

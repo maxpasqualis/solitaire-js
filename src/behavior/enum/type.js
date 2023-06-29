@@ -1,8 +1,8 @@
 class Type {
-  static King = new Type("king");
-  static Queen = new Type("queen");
-  static Jack = new Type("jack");
-  static Ace = new Type("ace");
+  static King = new Type("K");
+  static Queen = new Type("Q");
+  static Jack = new Type("J");
+  static Ace = new Type("A");
   static 2 = new Type("2");
   static 3 = new Type("3");
   static 4 = new Type("4");
@@ -13,12 +13,12 @@ class Type {
   static 9 = new Type("9");
   static 10 = new Type("10");
 
-  constructor(name) {
-    this.name = name;
+  constructor(value) {
+    this.value = value;
   }
 
   toString() {
-    return `Type.${this.name}`;
+    return `Type.${this.value}`;
   }
 }
 

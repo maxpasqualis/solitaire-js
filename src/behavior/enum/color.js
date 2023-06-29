@@ -2,12 +2,12 @@ class Color {
   static Red = new Color("red");
   static Black = new Color("black");
 
-  constructor(name) {
-    this.name = name;
+  constructor(value) {
+    this.value = value;
   }
 
   toString() {
-    return `Color.${this.name}`;
+    return `Color.${this.value}`;
   }
 }
 

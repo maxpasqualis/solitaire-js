@@ -6,7 +6,7 @@ class CardObj {
   }
 
   toString() {
-    return `${this.color.name} ${this.type.name} of ${this.suit.name}`;
+    return `${this.color.value} ${this.type.value} of ${this.suit.value}`;
   }
 }
 

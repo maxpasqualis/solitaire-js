@@ -1,15 +1,15 @@
 class Suit {
-  static Hearts = new Suit("hearts");
-  static Diamonds = new Suit("diamonds");
-  static Clubs = new Suit("clubs");
-  static Spades = new Suit("spades");
+  static Hearts = new Suit("♥");
+  static Diamonds = new Suit("♦");
+  static Clubs = new Suit("♣");
+  static Spades = new Suit("♠");
 
-  constructor(name) {
-    this.name = name;
+  constructor(value) {
+    this.value = value;
   }
 
   toString() {
-    return `Suit.${this.name}`;
+    return `Suit.${this.value}`;
   }
 }
 

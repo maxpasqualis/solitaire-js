@@ -1,11 +1,11 @@
 import './App.css'
-import Tableau from './components/Tableau'
+import Board from './components/Board'
 
 function App() {
 
   return (
     <>
-        <Tableau />
+        <Board />
     </>
   )
 }

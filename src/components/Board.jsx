@@ -1,6 +1,7 @@
 import React from "react";
 import Lane from "./Lane";
 import TableauObj from "../behavior/tableauObj";
+import "./styles/Board.css"
 
 class Board extends React.Component {
     render() {
@@ -10,11 +11,13 @@ class Board extends React.Component {
         for (let lane in board.tableau) {
             laneList.push(<Lane key={i} laneData={board.tableau[lane]}/>);
             i += 1;
-            // for clarity - remove after css has been fixed
-            laneList.push(<hr key={i}/>)
-            i += 1;
+
         }
-        return <div>{laneList}</div>;
+        return <div>
+                    <div id="tableau">
+                        {laneList}
+                    </div>
+                </div>;
     }
 }
 

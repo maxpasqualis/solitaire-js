@@ -1,6 +1,6 @@
 import React from "react";
 import Lane from "./Lane";
-import TableauObj from "../behavior/tableauObj";
+import TableauObj from "../behavior/boardObj";
 import "./styles/Board.css"
 
 class Board extends React.Component {
@@ -8,8 +8,8 @@ class Board extends React.Component {
         const board = new TableauObj()
         board.initialize()
         let laneList = [], i = 0;
-        for (let lane in board.tableau) {
-            laneList.push(<Lane key={i} laneData={board.tableau[lane]}/>);
+        for (let lane in board.tableau.cardDict) {
+            laneList.push(<Lane key={i} laneData={board.tableau.cardDict[lane]}/>);
             i += 1;
 
         }
